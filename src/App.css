@@ -1,38 +1,139 @@
-.App {
+
+/* added css */
+/* for project1 */
+.activepart 
+{
+  color:chartreuse!important;
+}
+
+.move 
+{
+  position:relative;
+  animation-name: animateme;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+
+}
+.move:hover 
+{
+  animation-play-state: paused;
+}
+@keyframes animateme 
+{
+  0%
+  {
+    bottom:0px;
+  }
+  100%
+  {
+    bottom:20px;
+  }
+
+}
+
+/* css fro cart photo */
+.photo
+{
+  position:relative;
+
+
+}
+.photodetail
+{
+  position:absolute;
+  background-color:rgba(255, 0, 0, 0.116);
+  height:100%;
+  width:100%;
+
+  top:0px;
+  left:0px;
+
+  color:greenyellow;
+ 
+
+}
+.classinput
+{
+box-shadow: 4px 4px 20px green!important;
+
+border:solid 1px green!important;
+width:50vw;
+border-radius: 20px;
+position:relative;
+
+animation-name:move-me;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+}
+@keyframes move-me 
+{
+  0% 
+  {
+top:0px;
+  }
+  100% 
+  {
+top:10px;
+  }
+}
+.classinput:focus
+{
+  /* to remove outlin of boder we have to do outline is none */
+outline: none;
+background-color:chartreuse;
+color:white;
+animation-play-state: paused;
+}
+.classinput:hover
+{
+  animation-play-state: paused;
+}
+
+.buttonsearch
+{
+  position:absolute;
+  border:none;
+  border-radius:20px;
+  background-color:red;
+   padding:20px;
+  color:white;
+  animation-name:horimove;
+  animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+}
+.buttonsearch:hover 
+{
+  animation-play-state: paused;
+}
+@keyframes horimove
+{
+0% 
+{
+  padding:20px;
+}
+100%
+{
+  padding:40px;
+}
+}
+
+.leftbuttonsearch 
+{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media (max-width:500px)
+{
+  .leftbuttonsearch
+  {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    text-align:left;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
