@@ -137,3 +137,9 @@ animation-timing-function: ease-in-out;
   }
 }
 
+.btnshape 
+{
+  border:none;
+  color:tomato;
+}
+
